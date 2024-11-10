@@ -536,6 +536,7 @@ int tlsuv_http_init_with_src(uv_loop_t *l, tlsuv_http_t *clt, const char *url, t
     clt->engine = NULL;
     clt->active = NULL;
     clt->connected = Disconnected;
+    clt->keepalive = false;
     clt->src = src;
     clt->host_change = false;
     clt->host = NULL;
